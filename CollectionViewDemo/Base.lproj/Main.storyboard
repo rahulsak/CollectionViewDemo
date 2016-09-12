@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="BZH-tg-rdA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JzX-6i-QfE">
+                            <size key="itemSize" width="200" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="LEm-0x-Woh" customClass="CustomCollectionView" customModule="CollectionViewDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="175" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="175" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qo-aO-Pt9">
+                                            <rect key="frame" x="8" y="120" width="159" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="159" id="sXc-w5-reM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rwP-Ck-tXd">
+                                            <rect key="frame" x="38" y="8" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="aY8-00-aiP"/>
+                                                <constraint firstAttribute="height" constant="100" id="sy2-NU-CQo"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.0" green="0.63698269399999996" blue="0.37428042760000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9qo-aO-Pt9" secondAttribute="bottom" id="HOd-mC-IFK"/>
+                                    <constraint firstItem="9qo-aO-Pt9" firstAttribute="leading" secondItem="LEm-0x-Woh" secondAttribute="leading" constant="8" id="PNh-Du-G2x"/>
+                                    <constraint firstItem="9qo-aO-Pt9" firstAttribute="top" secondItem="rwP-Ck-tXd" secondAttribute="bottom" constant="12" id="a3n-NQ-LJb"/>
+                                    <constraint firstItem="rwP-Ck-tXd" firstAttribute="top" secondItem="LEm-0x-Woh" secondAttribute="top" constant="8" id="aie-B9-tZn"/>
+                                    <constraint firstItem="rwP-Ck-tXd" firstAttribute="leading" secondItem="LEm-0x-Woh" secondAttribute="leading" constant="38" id="beT-3D-xt3"/>
+                                </constraints>
+                                <size key="customSize" width="175" height="200"/>
+                                <connections>
+                                    <outlet property="imgThumbnail" destination="rwP-Ck-tXd" id="OEd-cj-AR6"/>
+                                    <outlet property="lblName" destination="9qo-aO-Pt9" id="fsv-yP-sUX"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="314.5"/>
+        </scene>
+    </scenes>
+</document>
