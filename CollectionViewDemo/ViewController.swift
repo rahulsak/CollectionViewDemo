@@ -21,7 +21,7 @@ import UIKit
             let layout = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
             layout.estimatedItemSize = CGSize(width: 150,height: 40)
             
-            NetworkService.getItems { items in
+            NetworkService.getItems { (items) in
                 self.itemList = items
                 self.collectionView?.reloadData()
             }
