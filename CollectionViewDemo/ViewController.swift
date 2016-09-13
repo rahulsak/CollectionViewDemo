@@ -21,10 +21,11 @@ import UIKit
             let layout = collectionView?.collectionViewLayout as! UICollectionViewFlowLayout
             layout.estimatedItemSize = CGSize(width: 150,height: 40)
             
-            NetworkService.getItems { (items) in
-                self.itemList = items
-                self.collectionView?.reloadData()
+            NetworkService.getItems { [weak weakSelf = self](items) in
+                weakSelf?.itemList = items
+                weakSelf?.collectionView?.reloadData()
             }
+
         }
         
         override func didReceiveMemoryWarning() {

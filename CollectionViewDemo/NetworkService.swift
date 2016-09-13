@@ -46,6 +46,13 @@ class NetworkService {
             })
         })
         task.resume()
+        
+        
+    }
+    
+    
+    static func sendItem(completion:(String -> ())){
+        completion("rahul")
     }
     
     //get image from url
